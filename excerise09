@@ -1,0 +1,26 @@
+def random_number():
+	import random
+	count = 0
+	while True:
+		m = random.randint(1,9)
+		n = int(input("guess the number!"))
+		count += 1
+		if n < m:
+			print("too low")
+			l=input(": ")
+			if l=="exit":
+				break
+			else: continue
+		elif n> m:
+			print("too high")
+			l=input(": ")
+			if l=="exit":
+				break
+			else: continue
+		else:
+			print("exactly the same")
+			l=input(": ")
+			if l=="exit":
+				break
+			else: continue
+	return count
